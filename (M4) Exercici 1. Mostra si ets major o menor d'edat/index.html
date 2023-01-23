@@ -1,0 +1,38 @@
+<!-- 
+Fer un programa que li demani a l’usuari/ària mitjançant el prompt aquestes dades:
+
+Nom.
+Cognom.
+Edat.
+Un cop l’usuari/ària hagi acabat d’introduir les dades, aquestes s’han de mostrar:
+
+Per consola.
+Amb un popup (alert).
+Mitjançant getElementById(). 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal info</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <main>
+
+            <p id="info-message"></p>
+            <p>Introduce tu edad</p>
+            <input type="text" id="input-age">
+            <!-- <button onclick="showAge(); showName(); showSurname()">Click para la información</button> -->
+            <button onclick="showInfo()">Click para la información</button>
+                        
+        </main>
+
+    </header>
+
+    <script src="index.js"></script>
+</body>
+</html>
