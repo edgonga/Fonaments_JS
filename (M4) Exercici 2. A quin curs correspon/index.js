@@ -13,9 +13,9 @@ function showInfo () {
     
     
     const userAge = parseInt(document.getElementById("input-age").value)
-    if (userAge < 5) {
+    if (userAge < 6) {
         document.getElementById("info-message").innerHTML = "Preescolar"} 
-    if (userAge > 4 && userAge < 12) {
+    if (userAge > 5 && userAge < 12) {
         document.getElementById("info-message").innerHTML = "Primària"}
     if (userAge > 11 && userAge < 16) {
         document.getElementById("info-message").innerHTML = "ESO"}
