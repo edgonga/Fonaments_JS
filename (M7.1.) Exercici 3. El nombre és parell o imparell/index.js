@@ -3,10 +3,12 @@ const isEven = () => {
     const numString = document.getElementById("number-input").value
     const num = parseInt(document.getElementById("number-input").value)
     const numIsEven = num % 2 === 0
-    const onlyNumbers = /^\d+$/
+    const onlyNumbers = /^-?\d+$/
 
     if (!numString.match(onlyNumbers)) {
-    throw new Error("Debes introducir un número")
+        document.getElementById("result-message").innerHTML = "Debes introducir un número"
+        throw new Error("Debes introducir un número")
+    
     }
 
     if (numIsEven) {
