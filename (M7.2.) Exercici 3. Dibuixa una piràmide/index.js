@@ -11,7 +11,7 @@ const buildPyramide = () => {
     let lastPartPyramide = pyramide[pyramide.length -1]
 
     for (let index = 0; index <= numberFloors; index++) {
-        debugger
+        
         lastPartPyramide = lastPartPyramide.slice(1)
         pyramide.push(lastPartPyramide)
     }
