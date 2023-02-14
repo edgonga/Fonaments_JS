@@ -33,6 +33,7 @@ const convertToUpperCase = (str) => {
 }
 
 array1 = [1, 4, 9, 2, 22]
+str
 
 
 //myMap(array1, 44)  // To check if validation of the second parameter to be a function works properly
