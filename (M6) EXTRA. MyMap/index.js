@@ -1,40 +1,27 @@
-let result = []
-const myMap = (myArr, functionToDo) => {
-    
-    if (! functionToDo instanceof Function) { 
-        return console.log("El segundo parámetro debe ser una función")
+function myMap (myArr, functionToDo) {
+    const result = []
+
+    if (!functionToDo instanceof Function) {
+        return "El segundo parámetro debe ser una función"
     }
-        
-    
-    //console.log("Dentro función");
+
     for (let index = 0; index < myArr.length; index++) {
-        result.push(functionToDo(array1[index]))
-
-
+        result.push(functionToDo(myArr[index]))
     }
-    document.getElementById("result-message").innerHTML = result
-    console.log(result)
+
     return result
-} 
-   
-
-
-
-const multiplyByTwo = (num) => {
-    return num * 2
 }
 
-const multiplyByTen = (num) => {
-    return num * 10
-}
+const multiplyByTwo = (num) =>  num * 2
 
-const convertToUpperCase = (str) => {
-    return str.toUpperCase()
-}
+const multiplyByTen = (num) => num * 10
 
-array1 = [1, 4, 9, 2, 22]
-str
+const convertToUpperCase = (str) => str.toUpperCase()
 
+const nums = [1, 4, 9, 2, 22]
+const citiesNames = ['Barcelona', 'Paris', 'Roma', 'Londres', 'Berlin']
 
-//myMap(array1, 44)  // To check if validation of the second parameter to be a function works properly
-myMap(array1, multiplyByTwo)
+const result = myMap(citiesNames, convertToUpperCase)
+
+console.log(result)
+//document.getElementById("result-message").innerHTML = result
