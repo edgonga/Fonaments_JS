@@ -124,24 +124,32 @@ function showFilms(films) {
 //showFilms(films);
 
 function searchByCriteria(filmObj) {
-	directorCriteria = document.getElementById("search-value").value
+	const directorCriteria = document.getElementById("search-value").value
 	const directorFilm = filmObj.filter(film => film.director === directorCriteria)
-	//console.log(directorFilm);
-	//showFilms(directorFilm)
-	return directorFilm
+	showFilms(directorFilm)
+
 }
 
-function sortByRatingDesc() {
-    //showFilms()
+function sortByRatingDesc(filmsObj) {
+	function comparar(a, b) {
+		return a.imdbRating - b.imdbRating
+	}
+	const filmsDesc = filmsObj.sort(comparar)
+	showFilms(filmsDesc)
 }
 
-function sortByRatingAsc() {
-    //showFilms()
+function sortByRatingAsc(filmsObj) {
+	function comparar(a, b) {
+		return b.imdbRating - a.imdbRating
+	}
+	const filmsDesc = filmsObj.sort(comparar)
+	showFilms(filmsDesc)
 }
 
-function findByGenre(genre) {
-    //showFilms()
+function findByGenre(genreCriteria, filmsObj) {
+	const filmsByGenre = filmsObj.filter(film => film.genre.includes(genreCriteria))
+	showFilms(filmsByGenre)
 }
 
 
-searchByCriteria(films)
+findByGenre("Action", films)
