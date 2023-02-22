@@ -1,11 +1,12 @@
-module.exports = class Ordinadors  {
-
+export class Ordinadors  {
+    
     #brand
     #model
     #procesador
     #ramQuantity
     #capacity
     constructor(brand, model, procesador, ramQuantity, capacity) {
+        
         this.#brand = this.#validate( brand,  'Brand')
         this.#model = this.#validate(model, 'Model')
         this.#procesador = this.#validate(procesador, 'Procesador')
@@ -19,24 +20,28 @@ module.exports = class Ordinadors  {
         return value
     }
 
+    // getId () {
+    //     return this.#id
+    // }
+
     getBrand () {
-        console.log(this.#brand)
+        return this.#brand
     }
 
     getModel () {
-        console.log(this.#model)
+        return this.#model
     }
 
     getProcesador () {
-        console.log(this.#procesador)
+        return this.#procesador
     }
 
     getRamQuantity () {
-        console.log(this.#ramQuantity)
+        return this.#ramQuantity
     }
 
     getCapacity () {
-        console.log(this.#capacity)
+        return this.#capacity
     }
 
     setProcesador (newProcesador) {
@@ -56,12 +61,22 @@ module.exports = class Ordinadors  {
     }
 
     sumUp() {
-        const strOrdinador = JSON.stringify(this)
-        console.log(`La marca es ${strOrdinador.#brand}<br>
-                    El model es ${strOrdinador.#model}<br>
-                    El processador es ${strOrdinador.#procesador}<br>
-                    La quantitat de memòria es ${strOrdinador.#ramQuantity}<br>
-                    I la capacitat del disc dur es ${strOrdinador.#capacity}`);
+
+        // const pcBrand = this.#brand
+        // const pcModel = this.#model
+        // const pcProcesador = this.#procesador
+        // const pcRamQuantity = this.#ramQuantity
+        // const pcCapacity = this.#capacity
+
+        return (`La marca es ${this.#brand} <br>
+        El modelo ${this.#model}<br>
+        La capacidad ${this.#capacity}<br>
+        El procesador ${this.#procesador}<br>
+        La capacidad ${this.#ramQuantity}`) 
     }
+
+    // createPC(id) {
+    //     const id = new Ordinadors
+    // }
 }
 
