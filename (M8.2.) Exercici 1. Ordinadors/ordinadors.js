@@ -1,12 +1,13 @@
 export class Ordinadors  {
-    
+    #id
     #brand
     #model
     #procesador
     #ramQuantity
     #capacity
-    constructor(brand, model, procesador, ramQuantity, capacity) {
+    constructor(id, brand, model, procesador, ramQuantity, capacity) {
         
+        this.#id = this.#validate( id,  'Id')
         this.#brand = this.#validate( brand,  'Brand')
         this.#model = this.#validate(model, 'Model')
         this.#procesador = this.#validate(procesador, 'Procesador')
@@ -20,9 +21,9 @@ export class Ordinadors  {
         return value
     }
 
-    // getId () {
-    //     return this.#id
-    // }
+    getId () {
+        return this.#id
+    }
 
     getBrand () {
         return this.#brand
