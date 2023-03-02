@@ -5,7 +5,7 @@ import { eliminarHotel } from "./eliminarHotel.js"
 
 export const listHotel = []
 
-document.getElementById("crearHoteles").addEventListener("click", () => crearHotel)
+document.getElementById("crearHoteles").addEventListener("click", function () { crearHotel(listHotel) })
 document.getElementById("modifcarHotel").addEventListener("click", () => modificarHotel)
 document.getElementById("verHotel").addEventListener("click", () => verHotel)
 document.getElementById("eliminarHotel").addEventListener("click", () => eliminarHotel)
